@@ -1,16 +1,17 @@
-# WebMon for macOS & Windows 11 (`WM`) — v2.0.0
+# WebMon for macOS, iOS & Windows 11 (`WM`) — v2.2.0
 
-**Interactive Website DOM Component Picker, Resizable Desktop HUD Widgets, Intermittent Auto-Refresh & Local Keychain Credential Vault — by Low Effort Digital.**
+**Interactive Website DOM Component Picker, Visual + Code JSON/XML Data Mapper, Resizable Desktop & iOS Home/Lock Screen Widgets, Intermittent Auto-Refresh & Local Keychain Credential Vault — by Low Effort Digital.**
 
-`WebMon` (`com.loweffort.webmon`, formerly `WebWidget`) is a native Swift 5.10 + SwiftUI + WebKit macOS and Windows 11 WPF + WebView2 utility in the **Low Effort Digital** v2.0 desktop suite alongside **PerfMon** (`PM`), **EventMon** (`EM`), and **VolMon** (`VM`).
+`WebMon` (`com.loweffort.webmon`, formerly `WebWidget`) is a native Swift + SwiftUI + WebKit macOS, iOS (Home Screen, Lock Screen & StandBy), and Windows 11 WPF + WebView2 utility in the **Low Effort Digital** v2.2 suite alongside **PerfMon** (`PM`), **EventMon** (`EM`), and **VolMon** (`VM`).
 
 ---
 
 ## Key Capabilities
 
-1. **Interactive Web Browser & Visual DOM Component Picker (`BrowserPickerTabView`)**
-   - Browse any public or authenticated internal website in a full-featured WebKit browser.
-   - Toggle **Select Components: ON** to hover and visually highlight DOM elements (`<div>`, `<section>`, `<table>`, metric cards, charts) and click to add one or more components to your widget basket.
+1. **Interactive Web Browser, Visual DOM Picker & JSON/XML Structured Data Mapper (`BrowserPickerTabView` / `StructuredDataMapperSheetView`)**
+   - Browse any public or authenticated internal website, REST JSON endpoint (e.g., `https://api.github.com/rate_limit`), or XML/RSS feed in a full-featured WebKit browser.
+   - Toggle **Select Components: ON** to hover and visually highlight HTML DOM elements (`<div>`, `<section>`, `<table>`, metric cards, charts) or automatically formatted JSON/XML `[data-wm-path]` field cards, and click/tap to add one or more components to your widget basket.
+   - Open the **`{ } JSON / XML Mapper`** on macOS or iOS to browse flattened JSON/XML leaf nodes visually, click to assign any node as the **Target Value Path** (`$.resources.core.remaining`, `/rss/channel/item[0]/status`) or **Dynamic Label Path** (`$.resources.core.resource`, `/rss/channel/item[0]/title`), or edit raw JSON/XML code and custom value templates (`{{value}} / {{$.resources.core.limit}} req`) with live evaluation preview.
    - Includes a built-in interactive sandbox (`loweffort://dashboard-demo`) with live-updating telemetry and an interactive login portal for instant offline or online testing.
 
 2. **Resizable Desktop Widgets with Intermittent Auto-Refresh (`ResizableWebComponentWidgetView`)**

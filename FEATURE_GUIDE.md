@@ -1,11 +1,15 @@
 # WebMon Feature Guide
 
-## 1. Selecting Website Components in the Browser
-1. Open the **Browser & Picker** tab (`globe.desk.fill`).
-2. Enter any website URL (or pick a preset such as `loweffort://dashboard-demo`, `https://www.githubstatus.com`, or `http://localhost:3000`).
+## 1. Selecting Website Components or JSON/XML Fields in the Browser
+1. Open the **Browser & Picker** tab (`globe.desk.fill`) on macOS or the **Touch Picker** tab on iOS.
+2. Enter any website URL, REST JSON endpoint (such as `https://api.github.com/rate_limit`), or XML/RSS feed (or pick a preset such as `loweffort://dashboard-demo`, `https://www.githubstatus.com`, or `http://localhost:3000`).
 3. If the website requires authentication, switch to **Browse / Sign-In Mode** to sign in interactively, or click **Auto-Fill Login** to inject credentials from your local macOS Keychain Vault.
-4. Switch **Select Components: ON** and hover over any card, chart, table, or metric on the page. Click one or more DOM elements to add them to the **Selected Components** basket on the right.
-5. Choose your **Intermittent Refresh Interval** (`5s` to `15m+`), initial window size preset, and click **Create & Pin Resizable Widget**.
+4. Switch **Select Components: ON** and hover/tap any card, chart, table, metric, or auto-formatted JSON/XML field card on the page to add it to your widget basket.
+5. **Visual + Code JSON/XML Data Mapper (`{ } JSON / XML Mapper`)**:
+   - When an endpoint returns JSON or XML, WebMon automatically formats each leaf node into an interactive card (`[data-wm-path="..."]`) and enables the **`{ } JSON / XML Mapper`** sheet.
+   - Use the **Visual Field Tree** to search and click any node to set it as the **Target Value Path** (`$.resources.core.remaining` or `/rss/channel/item[0]/latency`) or **Dynamic Label Path** (`$.resources.core.resource` or `/rss/channel/item[0]/title`).
+   - Switch to **Code & Path Query** mode to inspect/pretty-print raw JSON or XML, write custom JSONPath/XMLPath expressions, and compose **Value Format Templates** (`{{value}} / {{$.resources.core.limit}} req` or `{{label}}: {{value}}`) with real-time evaluation preview.
+6. Choose your **Intermittent Refresh Interval** (`5s` to `15m+`), initial window size preset, and click **Create & Pin Resizable Widget**.
 
 ## 2. Resizing & Refreshing Desktop Widgets
 - Drag the header bar of any floating desktop widget to reposition it on screen.
