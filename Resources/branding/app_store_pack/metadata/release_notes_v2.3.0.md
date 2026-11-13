@@ -1,6 +1,7 @@
-# WebMon v2.3.0 for macOS & iOS/iPadOS (Build 40)
+# WebMon v2.3.0 for macOS & iOS/iPadOS (Build 41)
 
-## What's New in v2.3.0 (Build 40)
+## What's New in v2.3.0 (Build 41)
+- **Full-Card Scrollbar-Free Item Expansion**: Widget cards across all 12 styles on macOS and iOS never display scrollbars and automatically expand extra prescribed items and multi-row items to fill 100% of the available card area.
 - **Tabbed Main DOM / Header / Footer Customization**: Customize widget components across `Main DOM` (default), `Header`, and `Footer` tabs. Link any captured DOM section or add custom Static Text, Environment Variables, Date/Time, or Last Refresh Time tokens individually into the widget header or footer.
 - **Configurable DOM Refresh Settle Wait Time (macOS & iOS)**: Configure the post-load DOM settle wait time (`0s–30s`, default `12s`) across Widget Cards, the Widget Customization Editor, the Browser Picker, and App Settings on both macOS and iOS so async XHR/SPA hydration completes before capturing.
 - **Multi-Step Undo & Copy Widget**: Undo mistakes while editing widgets with a 1-click **Undo** button, or duplicate any widget's full configuration, auth profile, refresh cadence, and DOM components with **Copy Widget** (prompting for a new widget name before saving).
